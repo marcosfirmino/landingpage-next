@@ -1,24 +1,16 @@
-import localFont from "next/font/local";
+import Styles from "./Home.module.scss"
 import Header from "../../components/header";
+import Welcome from "../../components/welcome";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export default function Home() {
   return (
-    <div className="{style.container}">
-      <Header/>
+    <div className={Styles.container}>
+      <Header />
+      <Welcome />
 
 
 
     </div>
-  );
+  )
 }

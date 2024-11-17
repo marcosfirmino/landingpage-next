@@ -1,27 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/images/logo.svg";
-import Style from "./header.module.scss";
+import Styles from "../header/header.module.scss";
+import Button from "../button";
 
 const Header = () => {
     return (
-        <div className={Style.container}>
-            
-            <div className={Style.logotipo}>
-            <Image src = {Logo}></Image>
+        <div className={Styles.container}>
+            <div className={Styles.logotipo}>
+                <Image src = {Logo} alt="Logo"/>
             </div>
-            <div className={Style.menu}>
-            <ul>
-                <Link href="/">Home</Link>
-                <Link href="/">O que fazemos</Link>
-                <Link href="/">Cases</Link>
-            </ul>
+            <div className={Styles.menu}>
+                <Link href="#">Home</Link>
+                <Link href="#">O que fazemos</Link>
+                <Link href="#">Cases</Link>
             </div>
-            <div className="action">
-            <button className={Style.button}>Fale Conosco</button>
+            <div className="Style.action">
+               <Button title="Fale conosco"/>
             </div>
-    </div>
-    ) 
+        </div>
+    )
 }
 
-export default Header 
+export default Header

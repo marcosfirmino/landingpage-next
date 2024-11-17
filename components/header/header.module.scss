@@ -4,9 +4,10 @@
     width: 100%;
     background-color: $purple-color;
     border-bottom: 0.5px solid $gray-color;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .menu {
@@ -20,12 +21,3 @@
     }
 }
 
-.button {
-    padding: 15px 50px;
-    border-radius: 5px;
-    border-style: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: $green-color ;
-}
