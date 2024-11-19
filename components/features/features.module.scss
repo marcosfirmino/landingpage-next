@@ -3,6 +3,7 @@
 
 .container {
     @include Padding;
+    padding-bottom: 255px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -49,7 +50,7 @@
 
     p {
         font-size: 22px;
-        color: $grey-2-color;
+        color: $gray-2-color;
         width: auto;
         text-align: left;
     }
