@@ -1,23 +1,26 @@
 @import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/padding.scss";
 
 .container {
+    @include Padding; //Mixin
+    color: $white-color; //Variable
+    padding-top: 34px;
+    padding-bottom: 34px;
     width: 100%;
     background-color: $purple-color;
-    border-bottom: 0.5px solid $gray-color;
+    border-bottom: 0.5px solid $grey-color;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-between; 
-}
-
-.menu {
+    justify-content: space-between;
+  
+  }
+  
+  .menu {
     font-size: 22px;
-    
-    
+  
     a + a {
-        margin-left: 38.9px;
-        text-decoration: none;
-        color: white;
+      margin-left: 38.9px;
     }
-}
 
+  }
