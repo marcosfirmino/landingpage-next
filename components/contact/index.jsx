@@ -6,7 +6,7 @@ import Styles from "./contact.module.scss";
 const Contact = () => {
     return (
         <div className={Styles.container}>
-            <div className={Styles.text}>
+            <div className={Styles.texts}>
                 <span>ENTRE EM CONTATO</span>
                 <h2>Aumente seu resultado de vendas e performance</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>

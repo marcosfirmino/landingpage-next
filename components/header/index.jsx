@@ -15,7 +15,7 @@ const Header = () => {
                 <Link href="#">O que fazemos</Link>
                 <Link href="#">Cases</Link>
             </div>
-            <div className="Style.action">
+            <div className={Styles.action}>
                <Button title="Fale conosco"/>
             </div>
         </div>

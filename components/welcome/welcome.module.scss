@@ -1,4 +1,6 @@
 @import "/src/styles/mixins/padding.scss";
+@import "/src/styles/mixins/responsive.scss";
+@import "/src/styles/mixins/fonts.scss";
 
 .container {
     @include Padding;
@@ -10,20 +12,54 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    @include Phone {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        padding-top: 1rem;
+    }
+
+    @include Tablet {
+        height: 100%;
+        margin-bottom: 4rem;
+        padding-top: 4rem;
+    }
+
+    @include Laptop {
+        padding-top: 6rem;
+    }
 }
 
 .text {
     h1 {
+        @include SizeExtra;
         font-weight: bold;
-        font-size: 71px;
     }
 
     p {
-        font-size: 30px;
+        @include SizeNormal;
         opacity: 0.7;
     }
 }
 
 .image {
     text-align: end;
+
+    @include Phone {
+        text-align: center;
+        grid-column: 1;
+        grid-row: 1;
+
+         img {
+            width: 360px;
+            height: auto;
+            padding-right: 16px;
+         }
+    }
+
+    @include Tablet {
+        img {
+            width: 515px;
+            height: auto;
+        }
+    }
 }
