@@ -1,11 +1,18 @@
 @import "./mixins/colors.scss";
+@import "/src/styles/mixins/responsive.scss";
 
 html,
 body {
   padding: 0;
   margin: 0;
+  font-family: Roboto, sans-serif;
   background-color: $purple-color;
   color: $white-color;
+
+  @include Phone {
+    width: 100%;
+
+  }
 }
 
 a {
