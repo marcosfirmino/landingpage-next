@@ -1,6 +1,6 @@
 import Styles from "./input.module.scss"
 
-const Input = ({type, placeholder, pattern, required}) => {
+const Input = ({type, placeholder, pattern, required, onBluer}) => {
     return (
         <input 
             
@@ -8,8 +8,8 @@ const Input = ({type, placeholder, pattern, required}) => {
             placeholder={placeholder}
             pattern={pattern}
             required={required}
-            className=
-            {Styles.input}
+            className={Styles.input}
+            onBluer={onBluer}
             />
     )
 }

@@ -1,9 +1,18 @@
+import axios from "axios";
 import Button from "../button";
 import Input from "../input";
 import Select from "../select";
 import Styles from "./contact.module.scss";
+import { sendError } from "next/dist/server/api-utils";
 
 const Contact = () => {
+    const SendEmail = () => {
+        axios
+            .post("/api/sendEmail",{messageBody: `Nome: ${nome}, Email: ${email}, Telefone: ${telefone}, Site: ${site}, Midia: ${midia}`})
+            .then(()=> console.log("uhuuuul"))
+            .catch(()=> console.log("Opsss"))
+    }
+
     return (
         <div className={Styles.container}>
             <div className={Styles.texts}>
@@ -13,8 +22,8 @@ const Contact = () => {
             </div>
             <div className={Styles.form}>
                 <h2>Fale com um especialista</h2>
-                <form action="">
-                    <Input type="text"  placeholder="Nome completo" required />
+                <form onSubmit={SendEmail}>
+                    <Input type="text"  placeholder="Nome completo" onBluer={} required />
                     <Input type="email"  placeholder="E-mail profissional" required />
                     <Input
                      id="phone"
@@ -32,7 +41,7 @@ const Contact = () => {
                     ]} required/>
                         
     
-                    <Button title="Enviar" kind="full"/>
+                    <Button title="Enviar" kind="full" />
                 </form>
             </div>
             <div className={Styles.footer}>
